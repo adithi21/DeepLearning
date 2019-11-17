@@ -1,0 +1,11 @@
+{% extends"layout.html" %}
+{% block content %}
+
+        <h4>
+            <p>Upload the image and get results.</p>
+        </h4>
+    <form method="POST" enctype="multipart/form-data" action={{ url_for("upload_image_file") }}>
+        <input type="file" name="file" accept="image/*" >
+        &emsp;&emsp;&emsp; <input type="submit" value="Upload" name="submit">
+    </form>
+{% endblock %}
